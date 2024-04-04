@@ -15,14 +15,19 @@ void main() {
   if (num1 < num2 + num3 && num2 < num1 + num3 && num3 < num1 + num2) {
     print(
         "Esses triângulos Com os segmentos $num1, $num2 e $num3 podem formar um TRIÂNGULO.");
-    if (num1 == num2 || num1 == num3 || num2 == num3 || num3 == num1) {
-      print("Com esses segmentos podem formar um triãngulo ISÓSCELES.");
-    } else if (num1 == num2 && num2 == num3) {
-      print("Com esses segmentos podem formar um triãngulo EQUILÁTERO.");
-    } else {
-      print("Esses segmentos formam um triângulo ESCALENO");
-    }
-  } else {
+
+
+      if (num1 == num2 && num2 == num3) {
+        print("Com esses segmentos podem formar um triãngulo EQUILÁTERO.");
+      }
+      else if (num1 == num2 || num1 == num3 || num2 == num3 || num3 == num1) {
+        print("Com esses segmentos podem formar um triãngulo ISÓSCELES.");
+      }
+      else {
+        print("Esses segmentos formam um triângulo ESCALENO");
+      }
+  }
+  else {
     print("Esses segmentos não podem formar um triângulo.");
   }
 }
